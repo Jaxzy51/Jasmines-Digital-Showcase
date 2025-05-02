@@ -1,15 +1,14 @@
-import './Footer.css';
-
 const Footer = () => {
-  return (
-    <footer className="footer">
-      <p>© {new Date().getFullYear()} Jasmine Mohamed</p>
-      <div className="footer-links">
-        <a href="https://github.com/jasmine" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/jasmine" target="_blank">LinkedIn</a>
-      </div>
-    </footer>
-  );
-};
-
-export default Footer;
+    return (
+      <footer className="bg-dark text-white text-center py-3 mt-auto">
+        <div className="container">
+          <p className="mb-0">
+            &copy; {new Date().getFullYear()} Jasmine’s Digital Showcase. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    );
+  };
+  
+  export default Footer;
+  

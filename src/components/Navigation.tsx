@@ -1,55 +1,32 @@
-import { NavLink } from 'react-router-dom';
-import './Navigation.css';
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
-    <nav className="nav">
-      <ul className="nav-list">
-        <li>
-          <NavLink
-            to="/"
-            end
-            className={({ isActive }: { isActive: boolean }) =>
-              isActive ? 'active' : ''
-            }
-          >
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/portfolio"
-            className={({ isActive }: { isActive: boolean }) =>
-              isActive ? 'active' : ''
-            }
-          >
-            Portfolio
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/contact"
-            className={({ isActive }: { isActive: boolean }) =>
-              isActive ? 'active' : ''
-            }
-          >
-            Contact
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/resume"
-            className={({ isActive }: { isActive: boolean }) =>
-              isActive ? 'active' : ''
-            }
-          >
-            Resume
-          </NavLink>
-        </li>
-      </ul>
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div className="container">
+        <Link className="navbar-brand" to="/">Showcase</Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse" id="navbarContent">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <Link className="nav-link" to="/projects">Projects</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">About Me</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/contact">Contact</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   );
 };
 
 export default Navigation;
+
 
